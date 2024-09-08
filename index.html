@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    
+   
+    <script src="javascript.js" defer></script>
+
+<div class="calculator">
+    <div class="enter">
+        <div id="screen" class="screen">123456789</div>
+        <button class="addOperators" onclick="clearAll();">С</button>
+    </div>
+    
+    <div class="display"></div>
+
+    <div id="buttons">
+        <div class="buttons">
+        <button class="function" id="percent">%</button>
+        <button class="function" id="factorial" onclick="displayDigital('!');">n!</button>
+        <button class="number" onclick="displayDigital(7);">7</button>
+        <button class="number" onclick="displayDigital(8);">8</button>
+        <button class="number" onclick="displayDigital(9);">9</button>
+        <button class="operator" id="division" onclick="displayDigital('/');">/</button>
+        <button class="operator" id="leftBracket" onclick="displayDigital( '(' );">(</button>
+        <button class="operator" id="rightBracket" onclick="displayDigital( ')' );">)</button>
+        <button class="function" id="modul" onclick="displayDigital('|');">|x|</button>
+        <button class="function" id="power" onclick="displayDigital('^');">x^n</button>
+        <button class="number" onclick="displayDigital(4);">4</button>
+        <button class="number" onclick="displayDigital(5);">5</button>
+        <button class="number" onclick="displayDigital(6);">6</button>
+        <button class="operator" id="multiply" onclick="displayDigital('×');">×</button>
+        <button class="operator" id="equal" onclick="displayDigital('=');">=</button>
+        <button class="function" id="variable">x</button>
+        <button class="function" id="root" onclick="displayDigital('√');">√</button>   
+        <button class="number" onclick="displayDigital(1);">1</button>
+        <button class="number" onclick="displayDigital(2);">2</button>
+        <button class="number" onclick="displayDigital(3);">3</button>
+        <button class="operator" id="subtraction" onclick="displayDigital('-');">-</button>
+        <button class="addOperators" id="clear" onclick="clearLastNumber();"><img src="https://cdn-icons-png.flaticon.com/512/54/54221.png" class="img"></button>
+        <button class="alphabet" id="alphabet" onclick="reverso();">f(x)</button>
+        <button class="number" id="space"_></button>
+        <button class="number" id="0" onclick="displayDigital(0);">0</button>
+        <button class="number" id="dot" onclick="displayDigital('.');">.</button>
+        <button class="operator" id="add" onclick="displayDigital('+');">+</button>
+        <button class="addOperators" id="stepBack"></button> 
+    </div>
+    </div>
+    <div id="functions" class="none">
+        <div class="functions">
+            <button class="function" id="sin" onclick="displayDigital('sin()');">sin</button>
+            <button class="function" id="cos" onclick="displayDigital('cos()');">cos</button>   
+            <button class="function" id="tg" onclick="displayDigital('tg()');">tg</button>   
+            <button class="function" id="ctg" onclick="displayDigital('ctg()');">ctg</button> 
+            <button class="function" id="ln" onclick="displayDigital('ln');">ln</button>   
+            <button class="function" id="log" onclick="displayDigital('log');">log</button> 
+            <button class="operator" id="less" onclick="displayDigital( '<' );"><</button>
+            <button class="operator" id="greater" onclick="displayDigital( '>' );">></button>  
+            <button class="function" id="arcsin" onclick="displayDigital('arcsin');">arcsin</button>   
+            <button class="function" id="arccos" onclick="displayDigital('arccos');">arccos</button>   
+            <button class="function" id="arctg" onclick="displayDigital('arctg');">arctg</button>          
+            <button class="function" id="arcctg" onclick="displayDigital('arcctg');">arcctg</button>
+            <button class="number" onclick="displayDigital(pi);">pi</button>
+            <button class="number" onclick="displayDigital(exp);">e</button> 
+            <button class="alphabet" id="alphabet" onclick="reverso();">1-9</button>
+        </div>
+    </div>    
+</div>    
+</body>
+</html>
