@@ -164,7 +164,7 @@ equal.addEventListener('click', function math(){
             
     function calculator(){
         if(operations["+"]==0){
-            Result=Decimal(numbers[operations['+']+1]);
+            Result=(numbers[operations['+']+1]);
             numbers.splice(operations["+"]+1,2,Result);
             arrays=checkBrackets(bracket["("], bracket[")"], numbers, Result);            
             numbers=arrays[0]; digital=arrays[1];
@@ -214,8 +214,8 @@ equal.addEventListener('click', function math(){
             }
 
             else{
-                console.log(Decimal(numbers[operations["p"]+7]));
-                Result=Decimal(numbers[operations["p"]-17]).pow(Decimal(numbers[operations["p"]+7]));
+                console.log((numbers[operations["p"]+7]));
+                Result=(numbers[operations["p"]-17]).pow((numbers[operations["p"]+7]));
                 numbers.splice(operations["p"]-17,31,Result);
                 delete operations["p"]; 
             }
@@ -229,13 +229,13 @@ equal.addEventListener('click', function math(){
             console.log(operations);
                 
             if((operations['×']<operations['/'] && ("×" in operations)) || !("/" in operations)){
-                Result=Decimal(numbers[operations['×']-1]).mul(Decimal(numbers[operations['×']+1]));  
+                Result=(numbers[operations['×']-1]).mul((numbers[operations['×']+1]));  
                 numbers.splice(operations['×']-1,3,Result);
                 delete operations["×"];
             }
 
             else if((operations['×']>operations['/'] && ("/" in operations)) || !("×" in operations)){
-                Result=Decimal(numbers[operations['/']-1]).div(Decimal(numbers[operations['/']+1]));  
+                Result=(numbers[operations['/']-1]).div((numbers[operations['/']+1]));  
                 numbers.splice(operations['/']-1,3,Result);
                 delete operations["/"];     
             }
@@ -249,13 +249,13 @@ equal.addEventListener('click', function math(){
             console.log(operations["-"]);
                     
             if((operations["+"]<operations["-"] && ("+" in operations)) || !("-" in operations)){
-                Result=Decimal(numbers[operations["+"]-1]).add(Decimal(numbers[operations["+"]+1]));  
+                Result=(numbers[operations["+"]-1]).add((numbers[operations["+"]+1]));  
                 numbers.splice(operations["+"]-1,3,Result);
                 delete operations["+"];
             }
 
             else if((operations["+"]>operations["-"] && ("-" in operations)) || !("+" in operations)){
-                Result=Decimal(numbers[operations["-"]-1]).sub(Decimal(numbers[operations["-"]+1]));
+                Result=(numbers[operations["-"]-1]).sub((numbers[operations["-"]+1]));
                 numbers.splice(operations["-"]-1,3,Result);
                 delete operations["-"];
             }
